@@ -9,9 +9,9 @@ import Greeting from './Greeting';
 // Writing tests - The Three "A"s
 //  Arrange - set up the test data, test condition and environment
 //  Act - Run logic that should be tested (e.g execute function)
-//  Assert - compare execution resualts with expected results
+//  Assert - compare execution results with expected results
 
-// descibe() - function where we can group testubg suites together
+// describe() - function where we can group test suites together
 //  first argument - a brief description 
 //  second argument - an anonymous function where we put all the different... tests inside of
 
