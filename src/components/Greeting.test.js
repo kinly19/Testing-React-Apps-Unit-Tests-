@@ -14,6 +14,11 @@ import Greeting from './Greeting';
 // describe() - function where we can group test suites together
 //  first argument - a brief description 
 //  second argument - an anonymous function where we put all the different... tests inside of
+// https://jestjs.io/docs/api
+// https://jestjs.io/docs/expect
+
+// userEvent - helps us trigger user events in this virtual screen when testing ()
+//  https://testing-library.com/docs/ecosystem-user-event/
 
 // Regular expressions are patterns used to match character combinations in strings - (/learn react/)
 // ===================================================================
