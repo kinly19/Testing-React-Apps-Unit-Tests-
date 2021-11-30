@@ -1,0 +1,27 @@
+import { render, screen } from '@testing-library/react';
+import Greeting from './Greeting';
+
+// ============================== Notes ==============================
+// test() - function which is globally available
+// first argument we give the test a brief description 
+// second argument an anonymous function which will contain the actual code
+
+// Writing tests - The Three "A"s
+//  Arrange - set up the test data, test condition and environment
+//  Act - Run logic that should be tested (e.g execute function)
+//  Assert - compare execution resualts with expected results
+
+// Regular expressions are patterns used to match character combinations in strings - (/learn react/)
+// ===================================================================
+
+test('renders Hello World as a text', () => {
+  //Arrange
+  render(<Greeting/>);
+
+  // Act
+  // ... nothing
+
+  //Assert
+  const helloWorldElemenet = screen.getByText('Hello World'); 
+  expect(helloWorldElemenet).toBeInTheDocument();
+});
