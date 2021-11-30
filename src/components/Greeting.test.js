@@ -11,17 +11,33 @@ import Greeting from './Greeting';
 //  Act - Run logic that should be tested (e.g execute function)
 //  Assert - compare execution resualts with expected results
 
+// descibe() - function where we can group testubg suites together
+//  first argument - a brief description 
+//  second argument - an anonymous function where we put all the different... tests inside of
+
 // Regular expressions are patterns used to match character combinations in strings - (/learn react/)
 // ===================================================================
 
-test('renders Hello World as a text', () => {
-  //Arrange
-  render(<Greeting/>);
+//one suit with two test
+describe('Greeting component', () => {
 
-  // Act
-  // ... nothing
+  test('renders Hello World as a text', () => {
+    //Arrange
+    render(<Greeting/>);
+  
+    // Act
+    // ... nothing
+  
+    //Assert
+    const helloWorldElemenet = screen.getByText('Hello World'); 
+    expect(helloWorldElemenet).toBeInTheDocument();
+  });
 
-  //Assert
-  const helloWorldElemenet = screen.getByText('Hello World'); 
-  expect(helloWorldElemenet).toBeInTheDocument();
+  test('render divs paragraph', () => {
+    render(<Greeting />)
+    const paragraphElement = screen.getByText("Its good to see you");
+    expect(paragraphElement).toBeInTheDocument();
+  });
+
 });
+
